@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>댓글 추가</h1>
+    <form  method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="save btn btn-default">추가</button>
+    </form>
+{% endblock %}
